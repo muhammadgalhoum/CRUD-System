@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="CRUD System using HTML, CSS, JavaScript and Local Storage">
+  <meta name="keywords" content="CRUD System with Local Storage">
+  <meta name="" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome Library -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <!-- Main Template CSS File -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="main.js" defer></script>
+  <title>CRUD System</title>
+</head>
+<body>
+  <div class="modal">
+    <div class="modal-content">
+      <h2><span id="modal-title">Create</span> Item</h2>
+      <hr>
+      <div><input type="text" id="title" placeholder="title"></div>
+      <div class="prices">
+        <div>
+          <div><input type="number" id="price" placeholder="price"></div>
+          <div><input type="number" id="taxes" placeholder="taxes"></div>
+        </div>
+        <div>
+          <div><input type="number" id="ads" placeholder="ads"></div>
+          <div><input type="number" id="discount" placeholder="discount"></div>
+        </div>
+        <p>Item price: <span id="total"></span></p>
+      </div>
+      <div><input type="number" id="proTotalNum" placeholder="Total number of this product"></div>
+      <div><input type="number" id="count" placeholder="Number of products to be created"></div>
+      <div><input type="text" id="category" placeholder="category"></div>
+      <div><input type="date" id="date"></div>
+      <hr>
+      <div class="btns">
+        <button id="create">Create</button>
+        <button id="save">Save</button>
+        <button id="cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <header>
+      <h1>CRUD</h1>
+      <p>Products Management System</p>
+    </header>
+    <main>
+      <div class="tools">
+        <div class="toolsBtns">
+          <button id="openProductModal">Add Product</button>
+          <button id="dropDataBase">Drop DataBase</button>
+        </div>
+        <div class="searchDiv">
+          <label for="searchWith">Search with:</label>
+          <select id="searchWith">
+            <option value="" disabled selected>choose one</option>
+            <option value="title">Title</option>
+            <option value="date">Date</option>
+            <option value="category">Category</option>
+          </select>
+        </div>
+        <input type="search" id="search" placeholder="Start typing....">
+        <input type="date" id="searchedDate">
+      </div>
+      <h3>System Database</h3>
+      <p id="searchP"><span id="NumberOfSearchResults"></span> search results</p>
+      <div class="database">
+        <table>
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Title</th>
+              <th>Price</th>
+              <th>Taxes</th>
+              <th>Ads</th>
+              <th>Discount</th>
+              <th>Final Price</th>
+              <th>Total</th>
+              <th>Date</th>
+              <th>Category</th>
+              <th><i class="fa-solid fa-pen-to-square"></i></th>
+              <th><i class="fa-solid fa-trash"></i></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
